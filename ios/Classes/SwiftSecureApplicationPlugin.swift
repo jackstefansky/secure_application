@@ -40,6 +40,10 @@ public class SwiftSecureApplicationPlugin: NSObject, FlutterPlugin {
                 window.addSubview(colorView)
                 window.bringSubviewToFront(colorView)
                 
+                let imageName = "logo.png"
+                let image = UIImage(named: imageName)
+                let imageView = UIImageView(image: image!)
+
                 CGRect imageFrame = CGRectMake(
                 CGRectGetMidX(self.view.frame) - (imageView.size.width / 2.0),
                 CGRectGetMidY(self.view.frame) - (imageView.size.height / 2.0),
