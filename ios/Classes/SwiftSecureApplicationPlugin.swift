@@ -41,8 +41,8 @@ public class SwiftSecureApplicationPlugin: NSObject, FlutterPlugin {
                 //window.bringSubviewToFront(colorView)
                 
                 let imageName = "logo.png"
-                let image = UIImage(named: imageName)
-                let imageView = UIImageView(image: image!, alpha: opacity)
+                let image = UIImage(named: imageName, alpha: opacity)
+                let imageView = UIImageView(image: image!)
                 //imageView.tag = 99698
 
                 var imageFrame = CGRect(
