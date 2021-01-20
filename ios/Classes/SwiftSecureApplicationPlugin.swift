@@ -38,12 +38,13 @@ public class SwiftSecureApplicationPlugin: NSObject, FlutterPlugin {
                 colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                 colorView.backgroundColor = UIColor(white: 1, alpha: opacity)
                 window.addSubview(colorView)
-                window.bringSubviewToFront(colorView)
+                //window.bringSubviewToFront(colorView)
                 
                 let imageName = "logo.png"
                 let image = UIImage(named: imageName)
-                let imageView = UIImageView(image: image!)
-                
+                let imageView = UIImageView(image: image!, alpha: opacity)
+                //imageView.tag = 99698
+
                 var imageFrame = CGRect(
                     x: (window.bounds.size.width / 2.0) - (imageView.frame.size.width / 2.0),
                     y: (window.bounds.size.height / 2.0) - (imageView.frame.size.height / 2.0),
