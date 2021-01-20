@@ -45,11 +45,11 @@ public class SwiftSecureApplicationPlugin: NSObject, FlutterPlugin {
                 let imageView = UIImageView(image: image!)
                 
                 var imageFrame = CGRectMake(
-                CGRectGetMidX(window.bounds) - (imageView.size.width / 2.0),
-                CGRectGetMidY(window.bounds) - (imageView.size.height / 2.0),
-                imageView.size.width,
-                imageView.size.height);
-
+                    CGRectGetMidX(window.bounds) - (imageView.frame.size.width / 2.0),
+                    CGRectGetMidY(window.bounds) - (imageView.frame.size.height / 2.0),
+                    imageView.frame.size.width,
+                    imageView.frame.size.height);
+ 
                 imageView.frame = imageFrame
                 self.view.addSubview(imageView)
                 window.bringSubviewToFront(imageView)
