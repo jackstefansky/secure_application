@@ -44,14 +44,14 @@ public class SwiftSecureApplicationPlugin: NSObject, FlutterPlugin {
                 let image = UIImage(named: imageName)
                 let imageView = UIImageView(image: image!)
                 
-                var imageFrame = CGRectMake(
-                    CGRectGetMidX(window.bounds) - (imageView.frame.size.width / 2.0),
-                    CGRectGetMidY(window.bounds) - (imageView.frame.size.height / 2.0),
-                    imageView.frame.size.width,
-                    imageView.frame.size.height);
+                var imageFrame = CGRect(
+                    x: (window.bounds.size.width / 2.0) - (imageView.frame.size.width / 2.0),
+                    y: (window.bounds.size.height / 2.0) - (imageView.frame.size.height / 2.0),
+                    width: imageView.frame.size.width,
+                    height: imageView.frame.size.height);
  
                 imageView.frame = imageFrame
-                self.view.addSubview(imageView)
+                window.addSubview(imageView)
                 window.bringSubviewToFront(imageView)
 
                 let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
